@@ -1,0 +1,386 @@
+#ifndef  PP_PHY_IF_FILTER_BANDWIDTH_H
+#define  PP_PHY_IF_FILTER_BANDWIDTH_H
+//=============================================================================
+// ppPhyIfFilterBandwidth.h
+//=============================================================================
+// Copyright 2011 Silicon Laboratories, Inc.
+// http://www.silabs.com
+//
+// Target:
+//    Any Silicon Labs C8051 MCU.
+//
+// IDE:
+//    Silicon Laboratories IDE   Version 3.6
+//
+// Tool Chains:
+//    Keil        9
+//    SDCC        3
+//    Raisonance  7
+//
+// Project Name:
+//    PreProcessorPHY
+//
+// Version 2.0 - See release notes in ppPhy.c
+//    - 08NOV2011
+//
+// This software must be used in accordance with the End User License
+// Agreement.
+//
+//=============================================================================
+#ifndef  PHY_DEFS_H
+#include "ppPhy_defs.h"
+#endif
+//=============================================================================
+// FSK & GFSK Tables
+//=============================================================================
+//-----------------------------------------------------------------------------
+// First calculate the MODULATION_INDEX
+//-----------------------------------------------------------------------------
+#define MODULATION_INDEX ((TRX_DEVIATION*2)/TRX_DATA_RATE)
+//-----------------------------------------------------------------------------
+// MODULATION_INDEX < 2 (Narrowband)
+//-----------------------------------------------------------------------------
+#if (MODULATION_INDEX<2)
+#if (RX_BANDWIDTH<2600)
+#define IF_FILTER_BANDWIDTH 0x51
+#elif (RX_BANDWIDTH<2800)
+#define IF_FILTER_BANDWIDTH 0x52
+#elif (RX_BANDWIDTH<3100)
+#define IF_FILTER_BANDWIDTH 0x53
+#elif (RX_BANDWIDTH<3200)
+#define IF_FILTER_BANDWIDTH 0x54
+#elif (RX_BANDWIDTH<3700)
+#define IF_FILTER_BANDWIDTH 0x55
+#elif (RX_BANDWIDTH<4900)
+#define IF_FILTER_BANDWIDTH 0x41
+#elif (RX_BANDWIDTH<5400)
+#define IF_FILTER_BANDWIDTH 0x42
+#elif (RX_BANDWIDTH<5900)
+#define IF_FILTER_BANDWIDTH 0x43
+#elif (RX_BANDWIDTH<6100)
+#define IF_FILTER_BANDWIDTH 0x44
+#elif (RX_BANDWIDTH<7200)
+#define IF_FILTER_BANDWIDTH 0x45
+#elif (RX_BANDWIDTH<9500)
+#define IF_FILTER_BANDWIDTH 0x31
+#elif (RX_BANDWIDTH<10600)
+#define IF_FILTER_BANDWIDTH 0x32
+#elif (RX_BANDWIDTH<11500)
+#define IF_FILTER_BANDWIDTH 0x33
+#elif (RX_BANDWIDTH<12100)
+#define IF_FILTER_BANDWIDTH 0x34
+#elif (RX_BANDWIDTH<14200)
+#define IF_FILTER_BANDWIDTH 0x35
+#elif (RX_BANDWIDTH<16200)
+#define IF_FILTER_BANDWIDTH 0x36
+#elif (RX_BANDWIDTH<17500)
+#define IF_FILTER_BANDWIDTH 0x3A
+#elif (RX_BANDWIDTH<19400)
+#define IF_FILTER_BANDWIDTH 0x3B
+#elif (RX_BANDWIDTH<21400)
+#define IF_FILTER_BANDWIDTH 0x3C
+#elif (RX_BANDWIDTH<23900)
+#define IF_FILTER_BANDWIDTH 0x3D
+#elif (RX_BANDWIDTH<25700)
+#define IF_FILTER_BANDWIDTH 0x3E
+#elif (RX_BANDWIDTH<28200)
+#define IF_FILTER_BANDWIDTH 0x25
+#elif (RX_BANDWIDTH<32200)
+#define IF_FILTER_BANDWIDTH 0x26
+#elif (RX_BANDWIDTH<34700)
+#define IF_FILTER_BANDWIDTH 0x27
+#elif (RX_BANDWIDTH<38600)
+#define IF_FILTER_BANDWIDTH 0x2B
+#elif (RX_BANDWIDTH<42700)
+#define IF_FILTER_BANDWIDTH 0x2C
+#elif (RX_BANDWIDTH<47700)
+#define IF_FILTER_BANDWIDTH 0x2D
+#elif (RX_BANDWIDTH<51200)
+#define IF_FILTER_BANDWIDTH 0x2E
+#elif (RX_BANDWIDTH<56200)
+#define IF_FILTER_BANDWIDTH 0x15
+#elif (RX_BANDWIDTH<64100)
+#define IF_FILTER_BANDWIDTH 0x16
+#elif (RX_BANDWIDTH<69200)
+#define IF_FILTER_BANDWIDTH 0x17
+#elif (RX_BANDWIDTH<75200)
+#define IF_FILTER_BANDWIDTH 0x01
+#elif (RX_BANDWIDTH<83200)
+#define IF_FILTER_BANDWIDTH 0x02
+#elif (RX_BANDWIDTH<90000)
+#define IF_FILTER_BANDWIDTH 0x03
+#elif (RX_BANDWIDTH<95300)
+#define IF_FILTER_BANDWIDTH 0x04
+#elif (RX_BANDWIDTH<112100)
+#define IF_FILTER_BANDWIDTH 0x05
+#elif (RX_BANDWIDTH<127900)
+#define IF_FILTER_BANDWIDTH 0x06
+#elif (RX_BANDWIDTH<137900)
+#define IF_FILTER_BANDWIDTH 0x07
+#elif (RX_BANDWIDTH<142800)
+#define IF_FILTER_BANDWIDTH 0x94
+#elif (RX_BANDWIDTH<167800)
+#define IF_FILTER_BANDWIDTH 0x95
+#elif (RX_BANDWIDTH<181100)
+#define IF_FILTER_BANDWIDTH 0x99
+#elif (RX_BANDWIDTH<191500)
+#define IF_FILTER_BANDWIDTH 0x96
+#elif (RX_BANDWIDTH<208400)
+#define IF_FILTER_BANDWIDTH 0x9A
+#elif (RX_BANDWIDTH<225100)
+#define IF_FILTER_BANDWIDTH 0x81
+#elif (RX_BANDWIDTH<248800)
+#define IF_FILTER_BANDWIDTH 0x82
+#elif (RX_BANDWIDTH<269300)
+#define IF_FILTER_BANDWIDTH 0x83
+#elif (RX_BANDWIDTH<284900)
+#define IF_FILTER_BANDWIDTH 0x84
+#elif (RX_BANDWIDTH<335500)
+#define IF_FILTER_BANDWIDTH 0x88
+#elif (RX_BANDWIDTH<361800)
+#define IF_FILTER_BANDWIDTH 0x89
+#elif (RX_BANDWIDTH<420200)
+#define IF_FILTER_BANDWIDTH 0x8A
+#elif (RX_BANDWIDTH<468400)
+#define IF_FILTER_BANDWIDTH 0x8B
+#elif (RX_BANDWIDTH<518800)
+#define IF_FILTER_BANDWIDTH 0x8C
+#elif (RX_BANDWIDTH<577000)
+#define IF_FILTER_BANDWIDTH 0x8D
+#else
+#define IF_FILTER_BANDWIDTH 0x8E
+#endif
+//-----------------------------------------------------------------------------
+// MODULATION_INDEX < 10
+//-----------------------------------------------------------------------------
+#elif (MODULATION_INDEX<10)
+#if (RX_BANDWIDTH<2600)
+#define IF_FILTER_BANDWIDTH 0x51
+#elif (RX_BANDWIDTH<2800)
+#define IF_FILTER_BANDWIDTH 0x52
+#elif (RX_BANDWIDTH<3100)
+#define IF_FILTER_BANDWIDTH 0x53
+#elif (RX_BANDWIDTH<3200)
+#define IF_FILTER_BANDWIDTH 0x54
+#elif (RX_BANDWIDTH<3700)
+#define IF_FILTER_BANDWIDTH 0x55
+#elif (RX_BANDWIDTH<4900)
+#define IF_FILTER_BANDWIDTH 0x41
+#elif (RX_BANDWIDTH<5400)
+#define IF_FILTER_BANDWIDTH 0x42
+#elif (RX_BANDWIDTH<5900)
+#define IF_FILTER_BANDWIDTH 0x43
+#elif (RX_BANDWIDTH<6100)
+#define IF_FILTER_BANDWIDTH 0x44
+#elif (RX_BANDWIDTH<7200)
+#define IF_FILTER_BANDWIDTH 0x45
+#elif (RX_BANDWIDTH<9500)
+#define IF_FILTER_BANDWIDTH 0x31
+#elif (RX_BANDWIDTH<10600)
+#define IF_FILTER_BANDWIDTH 0x32
+#elif (RX_BANDWIDTH<11500)
+#define IF_FILTER_BANDWIDTH 0x33
+#elif (RX_BANDWIDTH<12100)
+#define IF_FILTER_BANDWIDTH 0x34
+#elif (RX_BANDWIDTH<14200)
+#define IF_FILTER_BANDWIDTH 0x35
+#elif (RX_BANDWIDTH<16200)
+#define IF_FILTER_BANDWIDTH 0x36
+#elif (RX_BANDWIDTH<17500)
+#define IF_FILTER_BANDWIDTH 0x37
+#elif (RX_BANDWIDTH<18900)
+#define IF_FILTER_BANDWIDTH 0x21
+#elif (RX_BANDWIDTH<21600)
+#define IF_FILTER_BANDWIDTH 0x22
+#elif (RX_BANDWIDTH<22700)
+#define IF_FILTER_BANDWIDTH 0x23
+#elif (RX_BANDWIDTH<24000)
+#define IF_FILTER_BANDWIDTH 0x24
+#elif (RX_BANDWIDTH<28200)
+#define IF_FILTER_BANDWIDTH 0x2A
+#elif (RX_BANDWIDTH<31900)
+#define IF_FILTER_BANDWIDTH 0x1F
+#elif (RX_BANDWIDTH<34700)
+#define IF_FILTER_BANDWIDTH 0x27
+#elif (RX_BANDWIDTH<38600)
+#define IF_FILTER_BANDWIDTH 0x2B
+#elif (RX_BANDWIDTH<42700)
+#define IF_FILTER_BANDWIDTH 0x2C
+#elif (RX_BANDWIDTH<47700)
+#define IF_FILTER_BANDWIDTH 0x2D
+#elif (RX_BANDWIDTH<51200)
+#define IF_FILTER_BANDWIDTH 0x2E
+#elif (RX_BANDWIDTH<56200)
+#define IF_FILTER_BANDWIDTH 0x15
+#elif (RX_BANDWIDTH<64100)
+#define IF_FILTER_BANDWIDTH 0x16
+#elif (RX_BANDWIDTH<69200)
+#define IF_FILTER_BANDWIDTH 0x17
+#elif (RX_BANDWIDTH<75200)
+#define IF_FILTER_BANDWIDTH 0x01
+#elif (RX_BANDWIDTH<83200)
+#define IF_FILTER_BANDWIDTH 0x02
+#elif (RX_BANDWIDTH<90000)
+#define IF_FILTER_BANDWIDTH 0x03
+#elif (RX_BANDWIDTH<95300)
+#define IF_FILTER_BANDWIDTH 0x04
+#elif (RX_BANDWIDTH<112100)
+#define IF_FILTER_BANDWIDTH 0x05
+#elif (RX_BANDWIDTH<127900)
+#define IF_FILTER_BANDWIDTH 0x06
+#elif (RX_BANDWIDTH<137900)
+#define IF_FILTER_BANDWIDTH 0x07
+#elif (RX_BANDWIDTH<138700)
+#define IF_FILTER_BANDWIDTH 0x0A
+#elif (RX_BANDWIDTH<154200)
+#define IF_FILTER_BANDWIDTH 0x0B
+#elif (RX_BANDWIDTH<168000)
+#define IF_FILTER_BANDWIDTH 0x98
+#elif (RX_BANDWIDTH<181100)
+#define IF_FILTER_BANDWIDTH 0x99
+#elif (RX_BANDWIDTH<208400)
+#define IF_FILTER_BANDWIDTH 0x9A
+#elif (RX_BANDWIDTH<232000)
+#define IF_FILTER_BANDWIDTH 0x9B
+#elif (RX_BANDWIDTH<256000)
+#define IF_FILTER_BANDWIDTH 0x9C
+#elif (RX_BANDWIDTH<269300)
+#define IF_FILTER_BANDWIDTH 0x83
+#elif (RX_BANDWIDTH<284900)
+#define IF_FILTER_BANDWIDTH 0x84
+#elif (RX_BANDWIDTH<335500)
+#define IF_FILTER_BANDWIDTH 0x88
+#elif (RX_BANDWIDTH<361800)
+#define IF_FILTER_BANDWIDTH 0x89
+#elif (RX_BANDWIDTH<420200)
+#define IF_FILTER_BANDWIDTH 0x8A
+#elif (RX_BANDWIDTH<468400)
+#define IF_FILTER_BANDWIDTH 0x8B
+#elif (RX_BANDWIDTH<518800)
+#define IF_FILTER_BANDWIDTH 0x8C
+#elif (RX_BANDWIDTH<577000)
+#define IF_FILTER_BANDWIDTH 0x8D
+#else
+#define IF_FILTER_BANDWIDTH 0x8E
+#endif
+//-----------------------------------------------------------------------------
+// MODULATION_INDEX > 10
+//-----------------------------------------------------------------------------
+#else
+#if (RX_BANDWIDTH<2600)
+#define IF_FILTER_BANDWIDTH 0x51
+#elif (RX_BANDWIDTH<2800)
+#define IF_FILTER_BANDWIDTH 0x52
+#elif (RX_BANDWIDTH<3100)
+#define IF_FILTER_BANDWIDTH 0x53
+#elif (RX_BANDWIDTH<3200)
+#define IF_FILTER_BANDWIDTH 0x54
+#elif (RX_BANDWIDTH<3700)
+#define IF_FILTER_BANDWIDTH 0x55
+#elif (RX_BANDWIDTH<4900)
+#define IF_FILTER_BANDWIDTH 0x41
+#elif (RX_BANDWIDTH<5400)
+#define IF_FILTER_BANDWIDTH 0x42
+#elif (RX_BANDWIDTH<5900)
+#define IF_FILTER_BANDWIDTH 0x43
+#elif (RX_BANDWIDTH<6100)
+#define IF_FILTER_BANDWIDTH 0x44
+#elif (RX_BANDWIDTH<7200)
+#define IF_FILTER_BANDWIDTH 0x45
+#elif (RX_BANDWIDTH<9500)
+#define IF_FILTER_BANDWIDTH 0x31
+#elif (RX_BANDWIDTH<10600)
+#define IF_FILTER_BANDWIDTH 0x32
+#elif (RX_BANDWIDTH<11500)
+#define IF_FILTER_BANDWIDTH 0x33
+#elif (RX_BANDWIDTH<12100)
+#define IF_FILTER_BANDWIDTH 0x34
+#elif (RX_BANDWIDTH<14200)
+#define IF_FILTER_BANDWIDTH 0x35
+#elif (RX_BANDWIDTH<16200)
+#define IF_FILTER_BANDWIDTH 0x36
+#elif (RX_BANDWIDTH<17500)
+#define IF_FILTER_BANDWIDTH 0x3A
+#elif (RX_BANDWIDTH<19400)
+#define IF_FILTER_BANDWIDTH 0x3B
+#elif (RX_BANDWIDTH<21400)
+#define IF_FILTER_BANDWIDTH 0x3C
+#elif (RX_BANDWIDTH<23900)
+#define IF_FILTER_BANDWIDTH 0x3D
+#elif (RX_BANDWIDTH<25700)
+#define IF_FILTER_BANDWIDTH 0x3E
+#elif (RX_BANDWIDTH<28200)
+#define IF_FILTER_BANDWIDTH 0x25
+#elif (RX_BANDWIDTH<32200)
+#define IF_FILTER_BANDWIDTH 0x26
+#elif (RX_BANDWIDTH<34700)
+#define IF_FILTER_BANDWIDTH 0x27
+#elif (RX_BANDWIDTH<38600)
+#define IF_FILTER_BANDWIDTH 0x2B
+#elif (RX_BANDWIDTH<42700)
+#define IF_FILTER_BANDWIDTH 0x2C
+#elif (RX_BANDWIDTH<47700)
+#define IF_FILTER_BANDWIDTH 0x2D
+#elif (RX_BANDWIDTH<51200)
+#define IF_FILTER_BANDWIDTH 0x2E
+#elif (RX_BANDWIDTH<56200)
+#define IF_FILTER_BANDWIDTH 0x15
+#elif (RX_BANDWIDTH<64100)
+#define IF_FILTER_BANDWIDTH 0x16
+#elif (RX_BANDWIDTH<69400)
+#define IF_FILTER_BANDWIDTH 0x1A
+#elif (RX_BANDWIDTH<77100)
+#define IF_FILTER_BANDWIDTH 0x1B
+#elif (RX_BANDWIDTH<85100)
+#define IF_FILTER_BANDWIDTH 0x1C
+#elif (RX_BANDWIDTH<95300)
+#define IF_FILTER_BANDWIDTH 0x1D
+#elif (RX_BANDWIDTH<102200)
+#define IF_FILTER_BANDWIDTH 0x1E
+#elif (RX_BANDWIDTH<115600)
+#define IF_FILTER_BANDWIDTH 0xAB
+#elif (RX_BANDWIDTH<127700)
+#define IF_FILTER_BANDWIDTH 0xAC
+#elif (RX_BANDWIDTH<142800)
+#define IF_FILTER_BANDWIDTH 0xAD
+#elif (RX_BANDWIDTH<153300)
+#define IF_FILTER_BANDWIDTH 0xAE
+#elif (RX_BANDWIDTH<168000)
+#define IF_FILTER_BANDWIDTH 0x98
+#elif (RX_BANDWIDTH<181100)
+#define IF_FILTER_BANDWIDTH 0x99
+#elif (RX_BANDWIDTH<208400)
+#define IF_FILTER_BANDWIDTH 0x9A
+#elif (RX_BANDWIDTH<232000)
+#define IF_FILTER_BANDWIDTH 0x9B
+#elif (RX_BANDWIDTH<256000)
+#define IF_FILTER_BANDWIDTH 0x9C
+#elif (RX_BANDWIDTH<269300)
+#define IF_FILTER_BANDWIDTH 0x83
+#elif (RX_BANDWIDTH<284900)
+#define IF_FILTER_BANDWIDTH 0x84
+#elif (RX_BANDWIDTH<335500)
+#define IF_FILTER_BANDWIDTH 0x88
+#elif (RX_BANDWIDTH<361800)
+#define IF_FILTER_BANDWIDTH 0x89
+#elif (RX_BANDWIDTH<420200)
+#define IF_FILTER_BANDWIDTH 0x8A
+#elif (RX_BANDWIDTH<468400)
+#define IF_FILTER_BANDWIDTH 0x8B
+#elif (RX_BANDWIDTH<518800)
+#define IF_FILTER_BANDWIDTH 0x8C
+#elif (RX_BANDWIDTH<577000)
+#define IF_FILTER_BANDWIDTH 0x8D
+#else
+#define IF_FILTER_BANDWIDTH 0x8E
+#endif
+#endif
+//-----------------------------------------------------------------------------
+// define RX_DWN3_BYP & RX_NDEC_EXP based on IF_FILTER_BANDWIDTH for FSK
+//-----------------------------------------------------------------------------
+#define RX_DWN3_BYP  (IF_FILTER_BANDWIDTH>>7)
+#define RX_NDEC_EXP  ((IF_FILTER_BANDWIDTH>>4)&0x03)
+//=============================================================================
+// End
+//=============================================================================
+#endif   // PP_PHY_IF_FILTER_BANDWIDTH_H

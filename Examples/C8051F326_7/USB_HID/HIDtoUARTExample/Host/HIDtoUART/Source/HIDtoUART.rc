@@ -1,0 +1,212 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\HIDtoUART.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""     // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\HIDtoUART.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 253, 54
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About HIDtoUART"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "HIDtoUART Version 2.0",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright © 2010 Silicon Laboratories Inc.  All Rights Reserved.",IDC_STATIC,40,39,206,8
+    DEFPUSHBUTTON   "OK",IDOK,196,7,50,16,WS_GROUP
+    LTEXT           "SLABHIDDevice.dll Version:",IDC_STATIC,40,24,88,8
+    LTEXT           "Major.Minor (Debug)",IDC_STATIC_LIBRARY_VERSION,131,24,67,8
+END
+
+IDD_HIDTOUART_DIALOG DIALOGEX 0, 0, 295, 332
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "HIDtoUART"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Connection",IDC_STATIC,7,7,281,44,WS_GROUP
+    COMBOBOX        IDC_COMBO_DEVICE_LIST,12,18,271,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CHECKBOX        "&Connect",IDC_CHECK_CONNECT,229,34,54,13,BS_PUSHLIKE | WS_GROUP
+    GROUPBOX        "Configuration",IDC_STATIC,7,53,281,39,WS_GROUP
+    LTEXT           "Baud Rate:",IDC_STATIC,13,63,37,8
+    EDITTEXT        IDC_EDIT_BAUD_RATE,12,74,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    PUSHBUTTON      "&Get Baud Rate",IDC_BUTTON_GET_BAUD_RATE,56,74,60,14,WS_GROUP
+    PUSHBUTTON      "&Set Baud Rate",IDC_BUTTON_SET_BAUD_RATE,119,74,60,14
+    GROUPBOX        "Data Transfer",IDC_STATIC,7,93,281,232,WS_GROUP
+    LTEXT           "Transmit (ASCII):",IDC_STATIC,13,104,57,8
+    EDITTEXT        IDC_EDIT_TRANSMIT,12,115,213,34,ES_MULTILINE | WS_VSCROLL
+    DEFPUSHBUTTON   "&Transmit",IDC_BUTTON_TRANSMIT,229,115,54,14,WS_GROUP
+    LTEXT           "Receive (ASCII):",IDC_STATIC,13,155,55,8
+    PUSHBUTTON      "C&lear",IDC_BUTTON_CLEAR,230,307,54,14,WS_GROUP
+    CONTROL         "",IDC_RICHEDIT2_RECEIVE,"RichEdit20A",ES_MULTILINE | ES_NOHIDESEL | ES_READONLY | WS_BORDER | WS_VSCROLL | WS_TABSTOP,12,166,271,138
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 2,0,0,0
+ PRODUCTVERSION 2,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "Silicon Laboratories"
+            VALUE "FileDescription", "HID to UART"
+            VALUE "FileVersion", "2.00"
+            VALUE "InternalName", "HIDtoUART.exe"
+            VALUE "LegalCopyright", "Copyright © 2010 Silicon Laboratories Inc. All Rights Reserved."
+            VALUE "OriginalFilename", "HIDtoUART.exe"
+            VALUE "ProductName", "HID to UART"
+            VALUE "ProductVersion", "2.00"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 246
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 47
+    END
+
+    IDD_HIDTOUART_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 288
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 325
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About HIDtoUART..."
+    IDS_STRING_NOT_CONNECTED "Please connect to a device first."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "res\HIDtoUART.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"     // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

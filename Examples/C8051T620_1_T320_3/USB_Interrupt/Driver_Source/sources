@@ -1,0 +1,36 @@
+TARGETNAME=SiInt
+TARGETTYPE=DRIVER
+DDKROOT=$(_NTDRIVE)$(_NTROOT)
+DRIVERTYPE=WDM
+
+
+C_DEFINES= $(C_DEFINES) -DWMI_SUPPORT -DUSB2
+
+TARGETPATH=obj
+
+INCLUDES=$(DDKROOT)\inc\wxp;		   \
+	 $(DDKROOT)\inc\ddk\wxp;	   \
+	 $(DDKROOT)\inc\ddk\wdm\wxp;	   \
+	 $(DDKROOT)\inc\crt;		   
+	 				   	
+         
+
+NTTARGETFILE0=mofcomp
+
+USE_MAPSYM=1
+
+TARGETLIBS=$(DDK_LIB_PATH)\usbd.lib	\
+	   $(DDK_LIB_PATH)\wdm.lib	\
+	   $(DDK_LIB_PATH)\wmilib.lib	
+	   
+	   
+
+MSC_WARNING_LEVEL=/W3 /WX
+
+SOURCES=intusb.c \
+	intpnp.c \
+	intpwr.c \
+	intdev.c \
+	intwmi.c \
+	intrwr.c \
+        intusb.rc

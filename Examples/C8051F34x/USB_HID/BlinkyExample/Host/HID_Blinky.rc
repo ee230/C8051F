@@ -1,0 +1,285 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\HID_Blinky.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""     // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\HID_Blinky.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 253, 54
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About HID_Blinky"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "HID_Blinky Version 2.0",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright © 2010 Silicon Laboratories Inc. All Rights Reserved.",IDC_STATIC,40,32,206,8
+    DEFPUSHBUTTON   "OK",IDOK,196,7,50,16,WS_GROUP
+    LTEXT           "SLABHIDDevice.dll Version:",IDC_STATIC,40,21,88,8
+    LTEXT           "Major.Minor",IDC_STATIC_LIBRARY,132,21,39,8
+END
+
+IDD_HID_BLINKY_DIALOG DIALOGEX 0, 0, 296, 223
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "HID_Blinky"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Connection",IDC_STATIC,7,7,281,44,WS_GROUP
+    COMBOBOX        IDC_COMBO_DEVICE_LIST,12,18,271,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CHECKBOX        "&Connect",IDC_CHECK_CONNECT,229,34,54,13,BS_PUSHLIKE | WS_GROUP
+    GROUPBOX        "Blink Pattern",IDC_STATIC,7,52,138,146,WS_GROUP
+    CONTROL         "Custom",IDC_RADIO_PATTERN_CUSTOM,"Button",BS_AUTORADIOBUTTON | WS_GROUP,12,63,40,10
+    CONTROL         "Potentiometer Selector",IDC_RADIO_PATTERN_SELECTOR,
+                    "Button",BS_AUTORADIOBUTTON,12,129,89,10
+    PUSHBUTTON      "Set",IDC_BUTTON_SET_BLINK_PATTERN,115,61,26,14,WS_GROUP
+    LTEXT           "Number of Pattern States:",IDC_STATIC,23,80,86,8
+    COMBOBOX        IDC_COMBO_NUM_STATES,115,78,26,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "LED1:",IDC_STATIC,23,96,20,8
+    LTEXT           "LED2:",IDC_STATIC,23,108,20,8
+    CONTROL         "",IDC_CHECK_LED1_S0,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,47,95,10,10
+    CONTROL         "",IDC_CHECK_LED2_S0,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,47,107,10,10
+    LTEXT           "0",IDC_STATIC_S0,49,119,8,8
+    CONTROL         "",IDC_CHECK_LED1_S1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,59,95,10,10
+    CONTROL         "",IDC_CHECK_LED2_S1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,59,107,10,10
+    LTEXT           "1",IDC_STATIC_S1,61,119,8,8
+    CONTROL         "",IDC_CHECK_LED1_S2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,71,95,10,10
+    CONTROL         "",IDC_CHECK_LED2_S2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,71,107,10,10
+    LTEXT           "2",IDC_STATIC_S2,73,119,8,8
+    CONTROL         "",IDC_CHECK_LED1_S3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,83,95,10,10
+    CONTROL         "",IDC_CHECK_LED2_S3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,83,107,10,10
+    LTEXT           "3",IDC_STATIC_S3,85,119,8,8
+    CONTROL         "",IDC_CHECK_LED1_S4,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,95,95,10,10
+    CONTROL         "",IDC_CHECK_LED2_S4,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,95,107,10,10
+    LTEXT           "4",IDC_STATIC_S4,97,119,8,8
+    CONTROL         "",IDC_CHECK_LED1_S5,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,107,95,10,10
+    CONTROL         "",IDC_CHECK_LED2_S5,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,107,107,10,10
+    LTEXT           "5",IDC_STATIC_S5,109,119,8,8
+    CONTROL         "",IDC_CHECK_LED1_S6,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,119,95,10,10
+    CONTROL         "",IDC_CHECK_LED2_S6,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,119,107,10,10
+    LTEXT           "6",IDC_STATIC_S6,121,119,8,8
+    CONTROL         "",IDC_CHECK_LED1_S7,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,131,95,10,10
+    CONTROL         "",IDC_CHECK_LED2_S7,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,131,107,10,10
+    LTEXT           "7",IDC_STATIC_S7,133,119,8,8
+    CONTROL         "50% Duty Cycle",IDC_RADIO_SELECTOR_0,"Button",BS_AUTORADIOBUTTON | WS_DISABLED,22,140,68,10
+    CONTROL         "Alternating LEDs",IDC_RADIO_SELECTOR_1,"Button",BS_AUTORADIOBUTTON | WS_DISABLED,22,151,69,10
+    CONTROL         "All Permutations",IDC_RADIO_SELECTOR_2,"Button",BS_AUTORADIOBUTTON | WS_DISABLED,22,162,67,10
+    CONTROL         "Absolute Craziness",IDC_RADIO_SELECTOR_3,"Button",BS_AUTORADIOBUTTON | WS_DISABLED,22,173,77,10
+    CONTROL         "Pulse",IDC_RADIO_SELECTOR_4,"Button",BS_AUTORADIOBUTTON | WS_DISABLED,22,184,33,10
+    GROUPBOX        "Blink Rate",IDC_STATIC,150,52,138,31,WS_GROUP
+    LTEXT           "Blink Rate:",IDC_STATIC,156,67,35,8
+    EDITTEXT        IDC_EDIT_RATE,195,64,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Hz",IDC_STATIC,239,67,9,8
+    PUSHBUTTON      "Set",IDC_BUTTON_SET_BLINK_RATE,257,64,26,14,WS_GROUP
+    GROUPBOX        "Blink Dimmer",IDC_STATIC,150,85,138,53,WS_GROUP
+    LTEXT           "LED Brightness:",IDC_STATIC,156,96,51,8
+    CONTROL         "",IDC_SLIDER_DIMMER,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,187,107,94,15
+    LTEXT           "0%",IDC_STATIC,192,124,12,8
+    LTEXT           "100%",IDC_STATIC,264,124,20,8
+    GROUPBOX        "Blink Statistics",IDC_STATIC,150,139,138,59,WS_GROUP
+    LTEXT           "LED1 Active:",IDC_STATIC,156,158,42,8
+    EDITTEXT        IDC_EDIT_LED1_ACTIVE,202,155,40,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "%",IDC_STATIC,246,158,8,8
+    LTEXT           "LED2 Active:",IDC_STATIC,156,175,42,8
+    EDITTEXT        IDC_EDIT_LED2_ACTIVE,202,172,40,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "%",IDC_STATIC,246,175,8,8
+    PUSHBUTTON      "Get",IDC_BUTTON_GET_STATS,257,155,26,14,WS_GROUP
+    PUSHBUTTON      "Enable Blink Pattern",IDC_BUTTON_ENABLE,7,202,138,14,WS_GROUP
+    PUSHBUTTON      "Disable Blink Pattern",IDC_BUTTON_DISABLE,150,202,138,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 2,0,0,0
+ PRODUCTVERSION 2,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "Silicon Laboratories Inc."
+            VALUE "FileDescription", "HID_Blinky"
+            VALUE "FileVersion", "2.0"
+            VALUE "InternalName", "HID_Blinky.exe"
+            VALUE "LegalCopyright", "Copyright © 2010 Silicon Laboratories Inc. All Rights Reserved."
+            VALUE "OriginalFilename", "HID_Blinky.exe"
+            VALUE "ProductName", "HID_Blinky"
+            VALUE "ProductVersion", "2.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 246
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 47
+    END
+
+    IDD_HID_BLINKY_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 288
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 216
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_HID_BLINKY_DIALOG DLGINIT
+BEGIN
+    IDC_COMBO_NUM_STATES, 0x403, 2, 0
+0x0031, 
+    IDC_COMBO_NUM_STATES, 0x403, 2, 0
+0x0032, 
+    IDC_COMBO_NUM_STATES, 0x403, 2, 0
+0x0033, 
+    IDC_COMBO_NUM_STATES, 0x403, 2, 0
+0x0034, 
+    IDC_COMBO_NUM_STATES, 0x403, 2, 0
+0x0035, 
+    IDC_COMBO_NUM_STATES, 0x403, 2, 0
+0x0036, 
+    IDC_COMBO_NUM_STATES, 0x403, 2, 0
+0x0037, 
+    IDC_COMBO_NUM_STATES, 0x403, 2, 0
+0x0038, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About HID_Blinky..."
+    IDS_STRING_NOT_CONNECTED "Please connect to a device first."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "res\HID_Blinky.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"     // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HIDtoUART", "HIDtoUART.vcproj", "{D27A9424-8F65-4B03-A4B0-FD5718610C33}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 2
+		SccProjectName0 = SurroundSCMScci
+		SccLocalPath0 = .
+		SccProvider0 = MSSCCI:Surround\u0020SCM
+		SccProjectUniqueName1 = HIDtoUART.vcproj
+		SccLocalPath1 = .
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D27A9424-8F65-4B03-A4B0-FD5718610C33}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D27A9424-8F65-4B03-A4B0-FD5718610C33}.Debug|Win32.Build.0 = Debug|Win32
+		{D27A9424-8F65-4B03-A4B0-FD5718610C33}.Release|Win32.ActiveCfg = Release|Win32
+		{D27A9424-8F65-4B03-A4B0-FD5718610C33}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

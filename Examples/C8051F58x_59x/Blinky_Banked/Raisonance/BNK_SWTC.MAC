@@ -1,0 +1,16 @@
+;NOTE - DO NOT EDIT this block of code!
+;<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+; do NOT optimize (don't replace A by PSBANK to optimize)
+
+PSBANK  data    0F5H
+
+mov      A, PSBANK
+
+anl      A, #0FCH
+
+orl      A, ?B_CURRENTBANK
+
+mov      PSBANK,A
+
+
+;<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<

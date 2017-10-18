@@ -1,0 +1,26 @@
+[Dynamic, Provider("WMIProv"),
+ WMI,
+ Description("SiInt.Sys Silabs C8051F320 USB Board"),
+ guid("{DDA31245-1BFC-4225-B2B8-EAAAB2E390B6}"),
+ locale("MS\\0x409")]
+class IntDeviceInformation
+{
+    [key, read]
+     string InstanceName;
+
+    [read] boolean Active;
+
+    [WmiDataId(1),
+     read,
+     write,
+     Description("The DebugPrintLevel property indicates the debug output level of the generic client driver.")
+     ]
+    uint32 DebugPrintLevel;
+	
+    [WmiDataId(2),
+     read,
+     Description("ModelName")
+     ]
+    string ModelName;
+
+};
